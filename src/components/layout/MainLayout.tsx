@@ -7,6 +7,7 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { createElement } from "react";
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   const items = [
@@ -56,7 +57,9 @@ const MainLayout = () => {
               minHeight: 360,
             }}
           >
-            <h1>The Main Content</h1>
+            {
+              < Outlet></Outlet>
+            }
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
