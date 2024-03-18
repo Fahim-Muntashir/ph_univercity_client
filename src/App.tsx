@@ -1,11 +1,7 @@
-import MainLayout from './components/layout/MainLayout.jsx';
-function App() {
+import MainLayout from './components/layout/MainLayout';
 
-  return (
-    <>
-      <MainLayout></MainLayout>
-    </>
-  )
+function App() {
+  return <MainLayout />;
 }
 
-export default App
+export default App;
