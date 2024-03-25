@@ -1,11 +1,9 @@
-import React from 'react';
-
 const FacultyDashboard = () => {
-    return (
-        <div>
-            StudentDashboard.tsx
-        </div>
-    );
+  return (
+    <div>
+      <h1> This is FacultyDashboard component </h1>
+    </div>
+  );
 };
 
 export default FacultyDashboard;
