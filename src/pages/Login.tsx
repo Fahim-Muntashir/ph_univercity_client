@@ -12,12 +12,13 @@ const Login = () => {
   const dispatch = useAppDispatch();
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      userId: 'A-0002',
+      userId: 'A-0001',
       password: 'admin123',
     },
   });
 
   const [login, { error }] = useLoginMutation();
+
 
   const onSubmit = async (data: FieldValues) => {
     const toastId = toast.loading('Logging in')
@@ -30,7 +31,7 @@ const Login = () => {
       };
 
       const res = await login(userInfo).unwrap();
-      const user = verifyToken(res.data.accessToken) as TUser;
+      const user = await verifyToken(res.data.accessToken) as TUser;
 
       dispatch(setUser({ user: user, token: res.data.accessToken }));
       navigate(`/${user.role}/dashboard`)
